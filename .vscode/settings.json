@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /workspaces/132 && export MY_USERNAME=\"035845\" && export MY_PASSWORD=\"035845\" && export TG_BOT_TOKEN=\"8774257757:AAFW97ijqY13TzuXVNJuh7zKKAe-ypfpfj8\" && export TG_CHAT_ID=\"6642001425\" && timeout 30 python scraper\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

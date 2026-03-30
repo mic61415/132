@@ -1,0 +1,31 @@
+name: Daily Data Fetcher
+
+on:
+  schedule:
+    # 設定定時執行：這裡是每天台灣時間早上 8 點 (UTC 時間 0 點)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 保留一個按鈕，讓你可以隨時手動點擊執行測試
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install playwright requests
+          playwright install chromium
+          
+      - name: Run script
+        env: # 將 GitHub Secrets 注入到環境變數中
+          MY_USERNAME: ${{ secrets.MY_USERNAME }}
+          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python main.py

@@ -1,0 +1,812 @@
+/* DEFAULTS
+----------------------------------------------------------*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #FCFAFF;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+H1, H2, H3, H4, H5, TH, THEAD, TFOOT {
+    COLOR: #003366;
+}
+
+H1 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+H2 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.75em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+H3 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.58em;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+H4 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.33em;
+    font-weight: 500;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+H5, DT {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+H6 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    width: 266px;
+}
+.headerContent {
+    /*padding-top: 50%;*/
+    position:relative;
+    /*top: 25%;*/
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+}
+.divLogo {
+    margin: 0 auto;
+    width: 45%;
+    text-align: left;
+    padding-top: 13px;
+}
+.divTitle {
+    margin: 0 auto;
+    width: 45%;
+    text-align: center;
+    padding-top: 13px;
+}
+.lblTitle {
+    font-family: Verdana, 'Arial Narrow', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #336d33;
+    text-align: center;
+}
+.tbInfo
+{
+    float: right;
+    text-align: right;
+    font-size: 10pt;
+    /*color: #000;*/   
+}
+
+    .tbInfo a:link, .tbInfo a:visited {
+        text-decoration: none;
+        color: #000;
+    }
+
+.header {
+    height: 57px;
+    width: 100%;
+    /*background-color: #e8f1c5;*/
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    background-image: url(../Images/Banner.gif); /* For IE 6 and 7 */
+    background-repeat: repeat;
+    /*background-position-x: center;*/
+    background-size: contain;
+}
+
+.body {
+    height: 90%;
+    margin: 0 auto -25px;
+}
+
+.footer {
+    height: 25px;
+    width: 100%;
+    display: table;
+}
+
+.footContent {
+    background-color: #5a5a53;
+    color: #fff;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.lnkStatusText, .lnkStatusText:link, .lnkStatusText:visited {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 125px;
+    height: 30px;
+    border: 2px solid #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 14px;
+}
+
+.lnkModule, .lnkModule:link, .lnkModule:visited {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 18%;
+    height: 20%;
+    border: 2px solid #000;
+    padding: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 14px;
+    margin: 50px;
+    float: left;
+    background-color: #e8f0c4;
+    border-radius: 6em;
+}
+
+#btnAll {
+    background-color: #fff;
+    color: #000;
+}
+
+#btnCall {
+    background-color: #e6140a;
+    color: #fff;
+}
+
+#lkbAcknowledge {
+    background-color: #ffff00;
+    color: #000;
+}
+
+#btnClean {
+    background-color: #006600;
+    color: #fff;
+}
+
+#linkWrapper {
+    height: auto;
+    width: 100%;
+    float: left;
+}
+
+.moduleWrapper {
+    height: calc(100% - 125px);
+    width: calc(100% - 100px);
+    padding: 50px;
+    text-align: center;
+    vertical-align: middle;
+    overflow-y: auto;
+}
+
+#pnlModules {
+    
+}
+
+#bedStatusWrapper {
+    height: calc(100% - 75px);
+    width: 100%;
+    float: left;
+    top: 0;
+    bottom: 40px;
+}
+
+#searchWrapper {
+    float: left;
+    width: 100%;
+    height: 48px;
+    border-top: 2px solid #4e2929;
+    display: table;
+}
+
+    #searchWrapper table {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+#gvBedStatus tbody tr th {
+    position: relative;
+}
+
+#gvBedStatus tbody {
+}
+
+.gvheader {
+    
+}
+
+#UpdatePanel1 {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto -25px;
+}
+
+#updatePnlStatus {
+    height: calc(100% - 50px);
+    width: 100%;
+    margin: 0 auto -25px;
+}
+
+#pnlBedStatus {
+    height: 100%;
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+#tableHeight {
+    height: 100%;
+}
+
+select, option, input, textarea {
+    font-family: Arial;
+    font-size: medium;
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+.DashWrapper {
+    height: 100%;
+    width: 100%;
+}
+
+#pnlDashboard {
+    height: calc(100% - 75px);
+    width: calc(100% - 50px);
+}
+
+.gvBedStatus {
+    color: #fff;
+    border: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.gvBedStatusHead {
+    border: 5px solid #fff;
+    height: 30px;
+    width: 90%;
+    color: #fff;
+    font-weight: bold;
+    background-color: #000040;
+    font-size: 30px;
+}
+
+.pagerStyle, .pagerStyle td {
+    text-align: center;
+    text-decoration: none;
+}
+
+    .pagerStyle a {
+    }
+
+.border0 {
+    border: 25px solid #3ADF00;
+}
+
+.border2 {
+    /*border: 22px solid #9D0000;002E63*/
+    border: 2px solid #CB010A;
+}
+
+.border1 {
+    /*border: 22px solid #9D0000;002E63*/
+    border: 25px solid #FF1A00;
+}
+
+.border_task1 {
+    /*border: 22px solid #9D0000;002E63*/
+    border: 3px solid #8C1717;
+}
+
+.border_task0 {
+    /*border: 22px solid #004284;*/
+    border: 3px solid #26466D;
+}
+
+#pnlTaskStatus {
+    height: calc(100% - 51px);
+    width: calc(100% - 6px);
+}
+
+.gvTaskStatus {
+    height: 100%;
+    width: 100%;
+}
+
+.gvTaskStatusHead {
+    background-color: #292929;
+    color: White;
+    font-weight: bold;
+    height: 30px;
+    Width: 100%;
+    font-size: 35px;
+    border: Solid 5px White;
+}
+
+.TSRowStyle {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    border: None;
+}
+
+.TSGroupHeaderRowStyle {
+    background-color: #8C1717;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    height: 25px;
+}
+
+.TSGroupalternAteHeaderRowStyle {
+    background-color: #002859;
+    text-align: left;
+    font-weight: bold;
+    color: #fff;
+    height: 25px;
+    font-size: 30px;
+}
+
+.TSAlternatingRowStyle {
+    background-color: white;
+    font-size: 30px;
+    color: #000;
+}
+
+#lblPage {
+    font-weight: bold;
+    font-size: large;
+    height: 20px;
+    width: 100%;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.width80 {
+    width: 80%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.width20 {
+    width: 20%;
+}
+
+.loginHeader {
+    background-color: #759E5C;
+}
+
+.loginWrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.loginContent {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+#tbWrapper {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#tbLogin {
+    text-align: left;
+    vertical-align: middle;
+    margin: 0 auto;
+    border: 2px solid #373434;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+    border-radius: 1em;
+    padding: 5px 5px;
+}
+
+#tbLogin td {
+    padding: 5px 10px;
+}
+
+#lblPlsLogin {
+    font-size: 13pt;
+    /*-webkit-text-shadow: rgba(0, 0, 0, 0.7) 0 0 40px;
+    text-shadow: rgba(0, 0, 0, 0.7) 0 0 40px;*/
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.textRight {
+    text-align: right;
+}
+
+
+/*a, a:link, a:visited
+{
+     font-family: Arial;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    height: 16px;
+}
+a:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+a:active
+{
+    color: #4F4F4F;
+    cursor: pointer;
+}*/
+
+
+
+.calenderStyle {
+}
+
+
+/* PANEL LAYOUT
+----------------------------------------------------------*/
+.roundedPanel {
+    border-color: #dec38b; /* background: #F0F0F0;*/
+    background: #FFFFFF;
+}
+
+.aspNetDisabled {
+    color: #9E9E9E;
+}
+
+/*TASK PAGE */
+.scroll table {
+    font-family: Arial;
+    font-size: 12px;
+    background: #fff;
+    border: solid 1px #FFFFFF;
+}
+
+.scroll td {
+    font-family: Arial;
+    font-size: 12px;
+    padding: 2px 3px 2px 3px; /* color: #000000;*/
+}
+
+.scroll th, .scroll th a:link {
+    font-weight: bold;
+    color: #01222B;
+    padding: 2px 3px 2px 3px;
+    background: #ad9c93;
+}
+
+
+
+.btnlayout {
+    /*font-family: Arial, Helvetica, sans-serif;     font-size: 11px;     font-weight: normal;     color: #0A2B2E;     background-color: #BBBBBB;     border: 1px solid #6B6965;     font-weight: bold;     cursor: hand;     padding: 1 1 1 1;*/
+    color: White;
+    font-size: 12px;
+    font-weight: bolder;
+    background-color: #FF1A00;
+    cursor: pointer;
+    border: 2px solid white;
+    width: 170px;
+    /* margin-top: 13px;*/
+}
+
+    .btnlayout:hover {
+        -webkit-box-shadow: 0 1px 4px rgba(255, 242, 0, 0.50), 0 0 40px rgba(255, 242, 0, 0.50) inset;
+        box-shadow: 0 1px 4px rgba(255, 242, 0, 0.50), 0 0 40px rgba(255, 242, 0, 0.50) inset;
+        background-color: #bb483b;
+    }
+
+
+
+.btnspecial {
+    height: 30px;
+    width: 90px;
+    border: 3px solid #c8d5a5;
+    -webkit-box-shadow: #B4B5B5 3px 3px 3px;
+    -moz-box-shadow: #B4B5B5 3px 3px 3px;
+    box-shadow: #B4B5B5 3px 3px 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: verdana, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-text-shadow: 2px 2px 0 rgba(168,168,168,0.3);
+    text-shadow: 2px 2px 0 rgba(168,168,168,0.3);
+    font-weight: bold;
+    color: #4F4F4F;
+    background-color: #e1edc1;
+    background-image: linear-gradient(to bottom, #edf7d0, #e1edc1);
+}
+
+.big {
+    height: 100px;
+}
+/* Dropdownlist Lay0ut
+/* Dropdownlist Lay0ut*/
+.ddllayout {
+    font-family: Arial;
+    font-size: 12px;
+    color: #000000;
+}
+
+
+#popTable {
+    font-family: Arial;
+}
+
+.winHeader {
+    background-color: #748889;
+}
+
+#popTable td {
+    background-color: #F1F1F1;
+}
+
+.lblClass {
+    font-family: Arial;
+    color: black;
+    font-size: medium;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+
+/*Setup Menu*/
+.setupdiv {
+    width: 100%;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: auto;
+    display: block;
+    background: url('../Images/topMenuImages.png') repeat-x;
+}
+
+.menu li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline;
+}
+
+.menu li a {
+    float: left;
+    padding-left: 15px;
+    display: block;
+    color: rgb(0,0,0);
+    text-decoration: none;
+    font: 15px Verdana, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background: url('../Images/topMenuImages.png') 0px -30px no-repeat;
+}
+
+.menu li a span {
+    line-height: 30px;
+    float: left;
+    display: block;
+    padding-right: 15px;
+    background: url('../Images/topMenuImages.png') 100% -30px no-repeat;
+}
+
+.menu li a:hover {
+    background-position: 0px -60px;
+    color: rgb(0,0,0);
+}
+
+.menu li a:hover span {
+    background-position: 100% -60px;
+}
+
+.menu li a.active, .menu li a.active:hover {
+    line-height: 30px;
+    font: 15px Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: url('../Images/topMenuImages.png') 0px -90px no-repeat;
+    color: rgb(0,0,0);
+}
+
+.menu li a.active span, .menu li a.active:hover span {
+    background: url('../Images/topMenuImages.png') 100% -90px no-repeat;
+}
+
+
+
+/*setup layout*/
+.loading {
+    border: solid; 
+    background-color: white; 
+    position: absolute; 
+    top: 220px;
+    left: 500px; 
+    width: 240px; 
+    height: 60px; 
+    padding-left: 5px; 
+    padding-top: 5px;
+    padding-right: 5px; 
+    z-index: 1; 
+    border-color: #F5F5F5; 
+    border-width: 5px;
+    text-align: center;
+}
+
+.editInfo {
+    background-color: #e7f5e6;
+}
+
+.listInfo {
+    height: calc(100% - 230px);
+    margin: 0 auto -25px;
+}
+
+#pnlList {
+    height: 100%;
+}
+
+.gvSetupList {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 3px;
+}
+
+.gvSetupList a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
+.AlternatingRowStyle {
+    background-color: #d8e4ed;
+}
+
+.SetupHeader {
+    background-color: #A1BFE9;
+    border: 1px solid #B5B4AB;
+    color: #000;
+    /*font-weight: bold;*/
+}
+
+.errLblMsg {
+    color: red;
+    font-size: 10pt;
+}
+
+#wrapfour {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#leftList {
+    width: calc(30% - 10px);
+    padding: 5px;
+    height: 100%;
+    float: left;
+}
+
+#middleLeft {
+    width: calc(30% - 10px);
+    padding: 5px;    vertical-align: middle;
+    height: 100%;
+    float: left;
+}
+
+#middleRight {
+    width: 10%;
+    height: 100%;
+    float: left;
+    display: table;
+}
+
+#middleRightInner {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#rightList {
+    width: calc(30% - 10px);
+    padding: 5px;    
+    height: 100%;
+    float: left;
+}
+
+#lstUser {
+    height: 90%;
+    width: calc(100% - 10px);
+    margin-right: 10px;
+}
+
+#lstAvlbLoc {
+    height: 90%;
+    width: 100%;
+}
+
+#lstAsgndLoc {
+    height: 90%;
+    width: 100%;
+}
+
+.btnLeftRight {
+    width: calc(100% - 20px);
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+}
+
+.lblGrpTitle {
+    width: 100%;
+    text-align: center;
+    font-size:large;
+}
