@@ -1,0 +1,31 @@
+name: Auto Check Bed Status
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 每小時自動執行一次
+  workflow_dispatch: # 允許您隨時手動點擊按鈕執行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          pip install playwright requests
+          playwright install chromium
+          
+      - name: Run script
+        env:
+          MY_USERNAME: ${{ secrets.MY_USERNAME }}
+          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python main.py
