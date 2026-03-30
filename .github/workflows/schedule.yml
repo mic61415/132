@@ -3,11 +3,13 @@ name: Auto Check Bed Status
 on:
   schedule:
     - cron: '0 * * * *' # 每小時自動執行一次
-  workflow_dispatch: # 允許您隨時手動點擊按鈕執行
+  workflow_dispatch: # 允許手動點擊執行
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # 消除 Node.js 警告
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,6 +26,7 @@ jobs:
           
       - name: Run script
         env:
+          # 這裡必須與 GitHub Secrets 的名稱完全對應
           MY_USERNAME: ${{ secrets.MY_USERNAME }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
